@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Home from '../CustomerComponent/home.png'
 import classes from './CustomerCard.css';
+import home from '../img/home.png'
 
 
 class CustomerCard extends Component {
@@ -9,23 +9,56 @@ class CustomerCard extends Component {
             <div className="row">
                 <div className="column border-w1 box-shadow">
                     <div className="column2">
-                        <h1 className="h1-left"><span className="headline">Customers</span></h1>
-                        <hr>
+                        <h1 className="h1-left"><span className="">Customers</span></h1>
+                        <hr className="blue-hr">
                         </hr>
                     </div>
                     <div className="column2">
-                        <button className="button button5">50%</button>
-                        <button className="button button5">50%</button>
-                        <button className="button button5">50%</button>
-                        <button className="button button5">50%</button>
+                        <button className="button button5">
+                            <img src={home} alt="Avatar"></img>
+                        </button>
+                        <button className="button button5">
+                            <img src={home} alt="Avatar"></img>
+                        </button>
+                        <button className="button button5">
+                            <img src={home} alt="Avatar"></img>
+                        </button>
+                        <button className="button button5">
+                            <img src={home} alt="Avatar"></img>
+                        </button>
 
                     </div>
                 </div>
+                <div className="column3">
+                    <div className="vl"></div>
 
+                </div>
                 <div className="column border-w1 box-shadow">
-                    <h1 className="h1-left"><span className="headline">Project Staticstics</span></h1>
-                    <hr>
-                    </hr>
+                    <div className="column2">
+                        <h1 className="h1-left"><span className="">Project Staticstics</span></h1>
+                        <hr className="blue-hr">
+                        </hr>
+                    </div>
+                    <div className="column2">
+                        <div>
+                            <span className="headline_left">CARRIER</span>
+                            <span className="blue_h1_left"><b>04</b></span>
+                        </div>
+                        <div className="v2"></div>
+                        <div className="float_right">
+                            <span className="headline_right">CARRIER</span>
+                            <span className="blue_h1_right"><b>04</b></span>
+                        </div>
+                    </div>
+                    <div className="column2">
+                        <hr className="black-hr">
+                        </hr>
+                    </div>
+                    {/* <div className="column2">
+                        <hr className="black-hr">
+                        </hr>
+                    </div> */}
+
                 </div>
             </div>
 
