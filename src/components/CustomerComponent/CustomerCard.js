@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './CustomerCard.css';
-import home from '../img/home.png'
+import home from '../img/home.png';
 
 
 class CustomerCard extends Component {
@@ -41,24 +41,36 @@ class CustomerCard extends Component {
                     </div>
                     <div className="column2">
                         <div>
-                            <span className="headline_left">CARRIER</span>
-                            <span className="blue_h1_left"><b>04</b></span>
+                            <span className="headline-left">CARRIER</span>
+                            <span className="blue-h1-left"><b>04</b></span>
                         </div>
                         <div className="v2"></div>
-                        <div className="float_right">
-                            <span className="headline_right">CARRIER</span>
-                            <span className="blue_h1_right"><b>04</b></span>
+                        <div className="float-right">
+                            <span className="headline-right">CARRIER</span>
+                            <span className="blue-h1-right"><b>04</b></span>
                         </div>
                     </div>
                     <div className="column2">
                         <hr className="black-hr">
                         </hr>
-                    </div>
-                    {/* <div className="column2">
-                        <hr className="black-hr">
-                        </hr>
-                    </div> */}
 
+                    </div>
+                    <div className="progress-div">
+                        <span className="progress-bar-headline">Devlopment</span>
+                        <span className="progress-bar-progress">2/8</span>
+
+                        <div className="w3-border">
+                            <div className="w3-grey" ></div>
+                        </div>
+                    </div>
+                    <div className="progress-div">
+                        <span className="progress-bar-headline">Test</span>
+                        <span className="progress-bar-progress">3/8</span>
+
+                        <div className="w3-border">
+                            <div className="w3-grey" ></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
