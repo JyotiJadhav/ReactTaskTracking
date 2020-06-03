@@ -65,10 +65,16 @@ class CustomerCard extends Component {
                     </div>
                     <div className="progress-div">
                         <span className="progress-bar-headline">Test</span>
-                        <span className="progress-bar-progress">3/8</span>
+                        <span className="progress-bar-progress">3/8 </span>
 
                         <div className="w3-border">
                             <div className="w3-grey" ></div>
+                        </div>
+
+                    </div>
+                    <div className="column2">
+                        <div className="">
+                            <button class="button-overview button1">Shadow Button</button>
                         </div>
                     </div>
                 </div>
