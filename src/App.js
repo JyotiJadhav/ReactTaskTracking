@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-// import './App.css';
+import classes from './styles/index.css';
 import Dashboard from './components/Dashboard/Dashboard';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 

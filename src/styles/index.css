@@ -1,5 +1,335 @@
-/* @tailwind base;
+.padding-left-10 {
+    padding-left: 10%;
+}
 
-@tailwind components;
+.padding-right-10 {
+    padding-right: 10%;
+}
 
-@tailwind utilities; */
+.height-1000p {
+    height: 1000px;
+}
+
+/* div.content {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 1000px;
+  } */
+
+.width-100 {
+    width: 100%;
+}
+
+.height-auto {
+    height: auto;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.float-left {
+    float: left;
+}
+
+.margin-left-0 {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+.box-shadow-4p-8p {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-shadow-8p-16p {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.border-w1 {
+    border-width: 1px;
+}
+
+.padding-2 {
+    padding: 2%;
+}
+
+/* Create two equal columns that floats next to each other */
+
+.split-card {
+    float: left;
+    width: 49%;
+    height: 460px;
+    /* Should be removed. Only for demonstration */
+}
+
+.column {
+    float: left;
+    width: 100%;
+}
+
+.padding-left-5 {
+    padding-left: 5%;
+}
+
+.blue-hr {
+    /* content: ' '; */
+    border: 2px solid skyblue;
+    width: 90%;
+    /* float: left; */
+    padding: 0px;
+}
+
+.black-hr-90 {
+    color: black;
+    width: 90%;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button-full-round {
+    height: 30%;
+    width: 13%;
+    border-radius: 50%;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 30px 25px;
+    cursor: pointer;
+}
+
+img {
+    width: 35px;
+}
+
+.vertical-line-460p {
+    border-left: 1px solid black;
+    height: 460px;
+}
+
+.padding-right-238p {
+    padding-right: 238px;
+}
+
+.vertical-line-150p {
+    border-left: 1px solid black;
+    height: 150px;
+    /* padding-right: 238px; */
+    /* margin-top: -75px; */
+}
+
+.blue-h1-left {
+    padding-top: 60px;
+    padding-left: 100px;
+    position: absolute;
+    color: rgb(33, 150, 243);
+    font-family: "Source Sans Pro";
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 42px;
+    letter-spacing: normal;
+    line-height: 1;
+}
+
+.headline-20 {
+    /* padding-top: 30px; */
+    /* padding-left: 80px; */
+    /* color: gray; */
+    /* position: absolute; */
+    font-family: "Source Sans Pro";
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 20px;
+    letter-spacing: normal;
+    line-height: 1;
+}
+
+.padding-top-30p {
+    padding-top: 30px;
+}
+
+.padding-left-80p {
+    padding-left: 80px;
+}
+
+.padding-left-70p {
+    padding-left: 70px;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.text-color-gray {
+    color: gray;
+}
+
+/* .headline-right {
+    font-family: "Source Sans Pro";
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 20px;
+    letter-spacing: normal;
+    line-height: 1;
+} */
+
+.padding-top-60p {
+    padding-top: 60px;
+}
+
+.padding-left-90p {
+    padding-left: 90px;
+}
+
+.text-color-dark-sky-blue {
+    color: rgb(33, 150, 243);
+}
+
+.headline-42 {
+    position: absolute;
+    font-family: "Source Sans Pro";
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 42px;
+    letter-spacing: normal;
+    line-height: 1;
+}
+
+.float-right {
+    float: right;
+}
+
+.w3-border {
+    border: 1px solid #ccc!important;
+    height: 10px;
+    width: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.w3-grey, .w3-hover-grey:hover, .w3-gray, .w3-hover-gray:hover {
+    color: #000!important;
+    background-color: rgb(33, 150, 243)!important;
+    height: 10px;
+    width: 25%;
+}
+
+.padding-top-10p{
+    padding-top: 10px;
+}
+
+.margin-25p {
+    margin: 25px;
+}
+
+.progress-bar-progress {
+    float: right;
+    margin: inherit;
+    padding-right: 30px;
+}
+
+.button-overview {
+    background-color: rgb(33, 150, 243);
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    margin-top: 20px;
+    margin-left: 40%;
+}
+
+/* ---- Navbar css --------- */
+
+/* ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+   
+  ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 15%;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    ul.sidenav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    
+    ul.sidenav li a {
+      float: left;
+      padding: 15px;
+    }
+    
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    ul.sidenav li a {
+      text-align: center;
+      float: none;
+    }
+  } */

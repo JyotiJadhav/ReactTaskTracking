@@ -7,8 +7,8 @@ class CustomNavbar extends Component {
     render() {
         return (
             <div>
-                <div>
-                <ul className="sidenav">
+                {/* <div> */}
+                {/* <ul className="sidenav">
                     <li><a className="active" href="#home">Home</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -17,7 +17,7 @@ class CustomNavbar extends Component {
                 </div>
                 <div className="content">
                 <CustomerCard></CustomerCard>
-                </div>
+                </div> */}
             </div>
         )
     }
