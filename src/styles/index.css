@@ -127,6 +127,10 @@
     cursor: pointer;
 }
 
+.background-whitesmoke{
+    background-color: whitesmoke;
+}
+
 img {
     width: 35px;
 }
