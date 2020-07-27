@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Customers from '../CustomerListComponent/Customers';
 import Header from '../CustomerListComponent/Header'
 import axios from '../../../axios';
-import DGS from '../../img/DGS.png';
 class CustomerListComponent extends Component {
     state = {
         records: [],
@@ -15,7 +14,7 @@ class CustomerListComponent extends Component {
             .then(response => {
                 const record = response.data;
                 const uniqueArr = [...new Set(record.records.map(data => data.fields.Customer))];
-                console.log(uniqueArr);
+                console.log(record);
                 if (this._isMounted) {
                     this.setState({ records: uniqueArr, isData: true });
                 }
@@ -36,7 +35,7 @@ class CustomerListComponent extends Component {
             custmorComponent = (
                 <div className="column padding-left-5">
                     {
-                        this.state.records.map((rec, index) => {
+                        this.state.records.map((rec) => {
                             return <Customers
                                 key={rec}
                                 img={rec} />
