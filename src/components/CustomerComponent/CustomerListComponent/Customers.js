@@ -6,7 +6,7 @@ const Customers = (props) => {
 
     return (
         <button className="button button-full-round box-shadow-4p-8p background-whitesmoke">
-            <img src={require(`../../../img/${props.img}.png`)} alt={props.img}></img>
+            <img src={require(`../../../img/${props.img}.png`)} title={props.img} alt={props.img}></img>
         </button>
     )
 };

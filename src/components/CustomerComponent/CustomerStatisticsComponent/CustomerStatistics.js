@@ -9,7 +9,7 @@ class CustomerStats extends Component {
     render() {
         return (
             <div>
-                <Header></Header>
+                <Header title = 'Project Staticstics'></Header>
                 <div className="column">
                     <Carrier></Carrier>
                     <div className="vertical-line-150p float-right padding-right-238p"></div>

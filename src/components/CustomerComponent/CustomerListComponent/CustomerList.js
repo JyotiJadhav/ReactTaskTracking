@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Customers from '../CustomerListComponent/Customers';
 import Header from '../CustomerListComponent/Header'
-import axios from '../../../axios';
+import * as actions from '../../../store/actions/index';
 class CustomerListComponent extends Component {
-    state = {
-        records: [],
-        error: false,
-        isData: false
-    };
     componentDidMount() {
         this._isMounted = true;
-        axios.get('/appq9BLeoiuwulpnF/tblZgIlcviq1cCply?fields%5B%5D=Customer')
-            .then(response => {
-                const record = response.data;
-                const uniqueArr = [...new Set(record.records.map(data => data.fields.Customer))];
-                console.log(record);
-                if (this._isMounted) {
-                    this.setState({ records: uniqueArr, isData: true });
-                }
-            })
-            .catch(error => {
-                this.setState({ error: true })
-            })
+
+        this.props.onFetchCustomerNames();
+        // axios.get('/appq9BLeoiuwulpnF/tblZgIlcviq1cCply?fields%5B%5D=Customer')
+        //     .then(response => {
+        //         const record = response.data;
+        //         const uniqueArr = [...new Set(record.records.map(data => data.fields.Customer))];
+        //         console.log(record);
+        //         if (this._isMounted) {
+        //             this.setState({ records: uniqueArr, isData: true });
+        //         }
+        //     })
+        //     .catch(error => {
+        //         this.setState({ error: true })
+        //     })
     }
 
     componentWillUnmount() {
@@ -29,13 +27,13 @@ class CustomerListComponent extends Component {
     }
 
     render() {
-        const isData = this.state.isData;
+
         let custmorComponent = null;
-        if (isData) {
+        if (!this.props.isData) {
             custmorComponent = (
                 <div className="column padding-left-5">
                     {
-                        this.state.records.map((rec) => {
+                        this.props.customers.map((rec) => {
                             return <Customers
                                 key={rec}
                                 img={rec} />
@@ -46,12 +44,27 @@ class CustomerListComponent extends Component {
         }
         return (
             <div>
-                <Header></Header>
+                <Header title='Customers'></Header>
                 {custmorComponent}
             </div >
         )
     }
 }
 
-export default CustomerListComponent;
+const mapStateToProps = state => {
+    return {
+        customers: state.customer.customers,
+        isData: state.customer.isData
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onFetchCustomerNames: () => dispatch(actions.fetchCustomerNames())
+    };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(CustomerListComponent);
+
 
