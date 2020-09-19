@@ -6,6 +6,10 @@
     padding-right: 10%;
 }
 
+.outline-none{
+    outline: none !important;
+}
+
 .height-1000p {
     height: 1000px;
 }
@@ -127,7 +131,7 @@
     cursor: pointer;
 }
 
-.background-whitesmoke{
+.background-whitesmoke {
     background-color: whitesmoke;
 }
 
@@ -164,8 +168,7 @@ img {
     line-height: 1;
 }
 
-
-.font-size-42p{
+.font-size-42p {
     font-size: 42px;
 }
 
@@ -214,8 +217,6 @@ img {
     color: rgb(33, 150, 243);
 }
 
-
-
 .float-right {
     float: right;
 }
@@ -236,7 +237,7 @@ img {
     width: 25%;
 }
 
-.padding-top-10p{
+.padding-top-10p {
     padding-top: 10px;
 }
 

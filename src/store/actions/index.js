@@ -1,3 +1,4 @@
 export {
-    fetchCustomerNames
+    fetchCustomerNames,
+    fetchCustomerDetailsByName
 } from './customer';

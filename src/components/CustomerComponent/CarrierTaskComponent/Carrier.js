@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../../store/actions/index';
 
 class Carrier extends Component {
+    componentDidMount() {
+        this._isMounted = true;
+        // this.props.onCustomerButtonClick();
+    }
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
     render() {
         return (
             <div>
@@ -11,5 +20,18 @@ class Carrier extends Component {
     }
 }
 
-export default Carrier;
+const mapStateToProps = state => {
+    return {
+        customers: state.customer.customers,
+        isData: state.customer.isData
+    };
+};
 
+const mapDispatchToProps = dispatch => {
+    return {
+        // onCustomerButtonClick: () => dispatch(actions.fetchCarrierStats())
+    };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Carrier);
