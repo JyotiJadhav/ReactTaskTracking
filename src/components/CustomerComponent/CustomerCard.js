@@ -17,10 +17,10 @@ class CustomerCard extends Component {
 
 
     render() {
-       
+
         return (
+
             <div className="row">
-                <h1> Test {this.props.custName}</h1>
                 <div className="split-card border-w1 box-shadow-4p-8p">
                     <CustomerListComponent customers={this.props.customers}
                         isData={this.props.isData} customer={this.props.custName}></CustomerListComponent>
@@ -29,7 +29,7 @@ class CustomerCard extends Component {
                     <div className="vertical-line-460p"></div>
                 </div>
                 <div className="split-card border-w1 box-shadow-4p-8p">
-                    <CustomerStats></CustomerStats>
+                    <CustomerStats custDetails = {this.props.customerDetails}></CustomerStats>
                 </div>
             </div>
         )
@@ -38,8 +38,8 @@ class CustomerCard extends Component {
 const mapStateToProps = state => {
     return {
         customers: state.customer.customers,
+        customerDetails: state.customer.customerDetails,
         isData: state.customer.isData,
-        custName: state.customer.custName
     };
 };
 

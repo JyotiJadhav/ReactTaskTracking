@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState , Component} from 'react';
 import Customers from '../CustomerListComponent/Customers';
 import Header from '../CustomerListComponent/Header'
-
+import { connect } from 'react-redux';
+import * as actions from '../../../store/actions/index';
 
 const CustomerListComponent = (props) => {
     const [custName, setCustName] = useState('');
     function handleCustomerButtonClick(custName) {
-        setCustName(custName);
-        console.log(props);
+        props.onClickCustomer(custName);
     }
     return (
         <div>
@@ -30,4 +30,19 @@ const CustomerListComponent = (props) => {
 
 }
 
-export default CustomerListComponent;
+const mapStateToProps = state => {
+    return {
+        
+        customerDeatils: state.customer.customerDeatils
+    };
+};
+
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onClickCustomer: (custName) => dispatch(actions.fetchCustomerDetailsByName(custName))
+    };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(CustomerListComponent);
